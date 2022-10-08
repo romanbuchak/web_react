@@ -1,0 +1,26 @@
+.clother{
+    display: flex;
+    transition: 0.5s;
+    flex-direction: column;
+    width: 30%;
+    height:80vh;
+}
+
+.clother:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.clother img {
+    width: 100%;
+}
+
+.clother h2 {
+    padding: 1.5vh 0;
+}
+
+.clother p {
+    margin-top: 3%;
+    width: 20vw;
+    height: 30vh;
+    font-weight: bold;
+}

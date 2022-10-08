@@ -1,0 +1,42 @@
+footer{
+    margin-top: 3em;
+    height: 25vh;
+    padding: 0 10vw;
+    background-color: #A9A9A9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text{
+    justify-content: center;
+}
+
+.text p{
+    color: black;
+}
+
+.social-networks{
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+}
+
+.social-networks img{
+    width: 30%;
+    height: 50%;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.facebook:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.instagram:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
