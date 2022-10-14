@@ -4,12 +4,11 @@ import homePage from "./../../assets/icons/Home-back.png";
 import firstClother from "./../../assets/icons/Kyrtka.png";
 import secondClother from "./../../assets/icons/Dress.png";
 import thirdClother from "./../../assets/icons/T-shirt.png";
-import Clother from "../../component/clother/Clother";
 
 
 function Home() {
     return (
-        <main>
+        <main className='home-page'>
             <section className="hero">
                 <img src={homePage}/>
                 <div className="hero-main">
@@ -20,11 +19,23 @@ function Home() {
                         ресторанів мегаполісів, але й в кожному передмісті.</p>
                 </div>
             </section>
-            <h2>НОВИНКИ</h2>
+            <h2 className='new'>НОВИНКИ</h2>
             <section className="clothing">
-                <Clother image={firstClother} name={"Куртка жіноча з капюшоном"} price={1799}/>
-                <Clother image={secondClother} name={"Сукня з коміром-стійкою"} price={699}/>
-                <Clother image={thirdClother} name={"Футболка оверсайз"} price={349}/>
+                <div className="clother">
+                    <img src={firstClother}/>
+                    <h2>Куртка жіноча з капюшоном</h2>
+                    <p>1799 ₴</p>
+                </div>
+                <div className="clother">
+                    <img src={secondClother}/>
+                    <h2>Сукня з коміром-стійкою</h2>
+                    <p>699 ₴</p>
+                </div>
+                <div className="clother">
+                    <img src={thirdClother}/>
+                    <h2>Футболка оверсайз</h2>
+                    <p>349 ₴</p>
+                </div>
             </section>
             <button className="view-more">View more</button>
         </main>
