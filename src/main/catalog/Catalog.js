@@ -13,6 +13,15 @@ function Catalog() {
                     <input type="text" id="search" placeholder="Search..."/>
                     <button onClick={() => null}>Search</button>
                 </div>
+                <h3 className='sorted'>Sort by:</h3>
+                <div className="sort">
+                    <input type="checkbox" id="name"/>
+                    <label>name</label>
+                </div>
+                <div className="sort">
+                    <input type="checkbox" id="price"/>
+                    <label>price</label>
+                </div>
                 <p>Total price: <span id="totalPrice"></span></p>
             </aside>
             <div className='items'>

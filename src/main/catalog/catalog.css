@@ -55,7 +55,30 @@ aside {
     transition: 0.3s;
 }
 
+.sort {
+    display: flex;
+}
+
+.sorted{
+    margin-bottom: 1vh;
+}
+
+.sort input {
+    margin-right: 0.5vw;
+    cursor: pointer;
+}
+
+.sort label {
+    color: darkred;
+    cursor: pointer;
+}
+
+.sort:last-of-type {
+    margin-bottom: 3vh;
+}
+
 aside p {
+    margin-top: -1vh;
     font-weight: bold;
     color: black;
 }
