@@ -49,6 +49,7 @@
     height: 35px;
     width: 105px;
     border-radius: 20px;
+    border: none;
     background-color: yellowgreen;
     color: white;
     overflow: hidden;
