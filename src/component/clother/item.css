@@ -1,18 +1,13 @@
-.item h2 {
-    display: flex;
-    justify-content: left;
-}
-
 .info {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     margin-top: 2vh;
 }
 
 .item img {
     width: 100%;
-    height: 100%;
     border-radius: 10px;
+    max-height: 40vh;
 }
 
 .item img:hover{
@@ -20,7 +15,7 @@
 }
 
 .item {
-    height: 80%;
+    width: 20vw;
 }
 
 .button-near-photo {

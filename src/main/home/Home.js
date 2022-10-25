@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import homePage from "./../../assets/icons/Home-back.png";
 import firstClother from "./../../assets/icons/Kyrtka.png";
@@ -7,6 +7,7 @@ import thirdClother from "./../../assets/icons/T-shirt.png";
 
 
 function Home() {
+    const [show, setShow] = useState(false)
     return (
         <main className='home-page'>
             <section className="hero">
@@ -37,7 +38,7 @@ function Home() {
                     <p>349 ₴</p>
                 </div>
             </section>
-            <button className="view-more">View more</button>
+            <button className="view-more" onClick={() => setShow(!show)}>View more</button>
         </main>
     );
 }

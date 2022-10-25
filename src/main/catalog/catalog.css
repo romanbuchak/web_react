@@ -18,12 +18,12 @@ aside {
     grid-column-gap: 2vw;
     grid-row-gap: 2vh;
     width: 70%;
-    margin-top: 5vh;
+    padding-top: 5vh;
 }
 
-.items img{
-    height: 70vh;
-}
+/*.items img{*/
+/*    height: 70vh;*/
+/*}*/
 
 .search {
     height: 5vh;
