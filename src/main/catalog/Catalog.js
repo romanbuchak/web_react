@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import "./catalog.css"
-//import {addmasuv} from "../../masuv";
 import Item from "../../component/clother/Item";
 
 
@@ -46,7 +45,7 @@ function Catalog() {
     };
 
     const handleSortByPrice = () => {
-        document.querySelector('#price').checked = false;
+        document.querySelector('#name').checked = false;
         setСlothers(prevClothers => sortByPrice([...prevClothers])
         )
     };
@@ -58,7 +57,7 @@ function Catalog() {
     };
 
     const handleSortByName = () => {
-        document.querySelector('#name').checked = false;
+        document.querySelector('#price').checked = false;
         setСlothers(prevClothers => sortByName([...prevClothers])
         )};
 
@@ -72,19 +71,19 @@ function Catalog() {
         <main className='main-content'>
             <aside>
                 <div className="search">
-                    <input type="text" id="search" placeholder="Search..." onChange={(event) => setValue(event.target.value)}/>
-                    {/*<button onClick={() => null}>Search</button>*/}
+                    <input type="text" id="search" placeholder="Пошук..." onChange={(event) => setValue(event.target.value)}/>
+                    {/*<button onChange={() => null}>Search</button>*/}
                 </div>
-                <h3 className='sorted'>Sort by:</h3>
+                <h3 className='sorted'>Сортувати за:</h3>
                 <div className="sort">
                     <input type="checkbox" id="name" onClick={handleSortByName}/>
-                    <label htmlFor="name">name</label>
+                    <label htmlFor="name">назвою</label>
                 </div>
                 <div className="sort">
                     <input type="checkbox" id="price" onClick={handleSortByPrice} />
-                    <label htmlFor="price">price</label>
+                    <label htmlFor="price">ціною</label>
                 </div>
-                <p>Total price: <span id="totalPrice"></span></p>
+                {/*<p>Загальна сума: <span id="totalPrice"></span></p>*/}
             </aside>
             <div className='items'>
                 {filteredClothers.map(element => (<Item img={element.img} name={element.name} price={element.price} description={element.description}/>))}

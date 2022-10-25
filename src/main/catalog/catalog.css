@@ -21,10 +21,6 @@ aside {
     padding-top: 5vh;
 }
 
-/*.items img{*/
-/*    height: 70vh;*/
-/*}*/
-
 .search {
     height: 5vh;
     display: flex;
@@ -77,8 +73,8 @@ aside {
     margin-bottom: 3vh;
 }
 
-aside p {
-    margin-top: -1vh;
-    font-weight: bold;
-    color: black;
-}
+/*aside p {*/
+/*    margin-top: -1vh;*/
+/*    font-weight: bold;*/
+/*    color: black;*/
+/*}*/
