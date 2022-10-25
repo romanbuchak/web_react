@@ -33,9 +33,9 @@ header .user{
 }
 
 header .cart{
-    width: 3%;
+    width: 2.5%;
     height: 25%;
-    margin-right: -6vw;
+    margin-right: -8vw;
 }
 
 header a:hover{

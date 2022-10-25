@@ -15,7 +15,7 @@ function SinglePage() {
                     </div>
                 </div>
                     <div className="footer-page">
-                        <h3>Ціна {state.price} ₴</h3>
+                        <h3>Ціна: {state.price} ₴</h3>
                         <Link to='/catalog'> <button>Go back</button></Link>
                         <Link to='/cart'><button className="to-cart">Add to cart</button></Link>
                     </div>
