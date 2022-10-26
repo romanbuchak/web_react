@@ -5,7 +5,7 @@ import Home from "./main/home/Home";
 import Catalog from "./main/catalog/Catalog";
 import Cart from "./main/cart/Cart";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import SinglePage from "./main/catalog/SinglePage";
+import SecondPage from "./main/catalog/SecondPage";
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/catalog" element={<Catalog/>}/>
-                <Route path="/novelty" element={<SinglePage />} />
+                <Route path="/novelty" element={<SecondPage/>}/>
                 <Route path="/cart" element={<Cart/>}/>
             </Routes>
             <Footer/>
