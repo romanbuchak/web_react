@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./home.css";
 import homePage from "./../../assets/icons/Home-back.png";
 import firstClother from "./../../assets/icons/Kyrtka.png";
 import secondClother from "./../../assets/icons/Dress.png";
 import thirdClother from "./../../assets/icons/T-shirt.png";
+import {Link} from "react-router-dom";
 
 
 function Home() {
-    const [show, setShow] = useState(false)
     return (
         <main className='home-page'>
             <section className="hero">
@@ -38,7 +38,7 @@ function Home() {
                     <p>349 ₴</p>
                 </div>
             </section>
-            <button className="view-more" onClick={() => setShow(!show)}>View more</button>
+            <Link to='/catalog'><button className="view-more" >View more</button></Link>
         </main>
     );
 }
