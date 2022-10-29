@@ -13,8 +13,8 @@ function Footer() {
                 <p>© 2019 - 2022 «Goldi». Всі права захищенно</p>
             </div>
             <div className="social-networks">
-                <a href="#"><img src={facebook} className="facebook" /></a>
-                <a href="#"><img src={instagram} className="instagram" /></a>
+                <a href="https://www.facebook.com/tovtstyle/"><img src={facebook} className="facebook" /></a>
+                <a href="https://www.instagram.com/goldi.ukraine/"><img src={instagram} className="instagram" /></a>
             </div>
         </footer>
     )
