@@ -1,27 +1,48 @@
-import {Link, useLocation} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 import "./secondPage.css"
+import axios from "axios";
+import {useEffect, useState} from "react";
+import Loader from "../../component/loader/Loader";
 
 function SecondPage() {
-    const location = useLocation();
-    const state = location.state;
-    console.log(state)
+    let {id} = useParams();
+    const [loading, setLoading] = useState(true)
+    const [clothers, setClothers] = useState({id: 1, name: "not found", price: 0, image: '', description: ""})
+
+    setTimeout(() => {
+        setLoading(false)
+    }, 2000)
+
+    useEffect(() => {
+        axios.get(`http://localhost:8080/api/clothes/get/${id}`).then(res => setClothers(res.data))
+    }, [id])
+
+
     return (
-        <div className="novelty">
-            {state && (<><div className="page">
-                    <div className="image"><img src={state.img}/></div>
-                    <div className="content-novelty">
-                        <h1>{state.name}</h1>
-                        <p>{state.description}</p>
+        <>
+            {loading ?
+                <Loader/>
+                :
+                <div className="novelty">
+                    <div className="page">
+                        <img className="image" src={clothers.image}/>
+                        <div className="content-novelty">
+                            <h1>{clothers.name}</h1>
+                            <p>{clothers.description}</p>
+                        </div>
+                    </div>
+                    <div className="footer-page">
+                        <h3>Ціна: {clothers.price} ₴</h3>
+                        <Link to='/catalog'>
+                            <button>Go back</button>
+                        </Link>
+                        <Link to='/cart'>
+                            <button className="to-cart">Add to cart</button>
+                        </Link>
                     </div>
                 </div>
-                    <div className="footer-page">
-                        <h3>Ціна: {state.price} ₴</h3>
-                        <Link to='/catalog'><button>Go back</button></Link>
-                        <Link to='/cart'><button className="to-cart">Add to cart</button></Link>
-                    </div>
-                </>
-            )}
-        </div>
+            }
+        </>
     )
 }
 
