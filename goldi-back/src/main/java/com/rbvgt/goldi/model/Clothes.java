@@ -24,7 +24,7 @@ public class Clothes {
     @Column
     private Integer price;
 
-    @Column
+    @Column(length = 2000)
     private String image;
 
     @Column
