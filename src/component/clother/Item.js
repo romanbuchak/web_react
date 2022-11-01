@@ -11,10 +11,6 @@ function Item(props){
             <h2>{props.name}</h2>
             <div className="info">
                 <b>ціна: {props.price} ₴</b>
-                {/*<Link className="button-link" to='/novelty' state={{img: props.img, name: props.name,*/}
-                {/*    price: props.price, description: props.description}}>*/}
-                {/*    <button className='button-near-photo'>Більше...</button></Link>*/}
-
                 <Link className="button-link" to={`/novelty/${props.id}`}>
                     <button className="button-near-photo">Більше...</button></Link>
             </div>
