@@ -3,6 +3,8 @@ import "./secondPage.css"
 import axios from "axios";
 import {useEffect, useState} from "react";
 import Loader from "../../component/loader/Loader";
+import { useDispatch } from "react-redux"
+import { addToCart } from "../../component/slice/cartSlice";
 
 function SecondPage() {
     let {id} = useParams();
@@ -16,6 +18,12 @@ function SecondPage() {
     useEffect(() => {
         axios.get(`http://localhost:8080/api/clothes/get/${id}`).then(res => setClothers(res.data))
     }, [id])
+
+    const dispatch = useDispatch();
+
+    const handleAddToCart = (clothers) => {
+        dispatch(addToCart(clothers))
+    };
 
 
     return (
@@ -34,10 +42,10 @@ function SecondPage() {
                     <div className="footer-page">
                         <h3>Ціна: {clothers.price} ₴</h3>
                         <Link to='/catalog'>
-                            <button>Go back</button>
+                            <button>Повернутися назад</button>
                         </Link>
                         <Link to='/cart'>
-                            <button className="to-cart">Add to cart</button>
+                            <button className="to-cart" onClick={() => handleAddToCart(clothers)}>Додати до корзини</button>
                         </Link>
                     </div>
                 </div>
